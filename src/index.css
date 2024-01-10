@@ -1,0 +1,62 @@
+/* typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700; 
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400; 
+}
+
+/* default css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+  color: white;
+}
+body {
+  font-weight: 400;
+  overflow-x: hidden;
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  color: white !important;
+}
+p, a, li, button, ul {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  text-decoration: none;
+  list-style: none;
+}
+a:hover {
+  text-decoration: none;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+}
+
+@media (min-width:1700px) {
+	main .container {
+		max-width: 100%;
+		padding: 0 150px;
+	}
+}
+
+p.success {
+	color: green;
+}
+
+p.danger {
+	color: red;
+}
