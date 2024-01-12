@@ -18,7 +18,6 @@
 }
 
 .navContainer ul {
-    list-style: none;
     gap: 20px;
     margin: 0;
     padding: 0;
@@ -30,14 +29,19 @@
 }
 
 .navContainer ul li a {
-    text-decoration: none;
     color: inherit;
+    transition: filter 0.3s ease;
+}
+
+.navContainer ul li a:hover {
+    color: wheat;
 }
 
 .icons {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
+    margin-left: 10px;
 }
 
 .social-icon {
@@ -49,63 +53,134 @@
 .icons a {
     text-decoration: none;
     color: inherit;
+    padding: 4px;
+    border: 1px solid rgb(255, 255, 255, 0.4);
+    border-radius: 50%;
+    background-color: rgba(252, 249, 249, 0.3);
 }
 
+.icons a:hover {
+    background-color: rgb(97, 36, 36);
+    color: black;
+}
 .icons button {
-    background-color: #121212;
-    color: white;
-    padding: 5px;
-    border: 1px solid white;
-    border-radius: 5px;
+    /* width: 220px; */
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
     cursor: pointer;
     position: relative;
-    overflow: hidden;
+    z-index: 0;
+    border-radius: 10px;
+    font-weight: 700;
+    padding: 18px 34px;
+    font-size: 18px;
+    margin-left: 18px;
+    transition: 0.3s ease-in-out;
 }
 
-.icons button:hover {
-    color: black;
+.icons button span {
+    z-index: 1;
 }
 
 .icons button::before {
-    content: "";
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
     position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    transition: left 0.3s ease;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 5px;
+}
+
+.icons button:active {
+    color: #000;
+}
+
+.icons button:active:after {
+    background: transparent;
 }
 
 .icons button:hover::before {
+    opacity: 1;
+}
+
+.icons button:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
     left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+
+
+.toggleButton {
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 21px;
+    height: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.toggleButtonLines {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
 }
 
 /* Media Queries */
 
 @media screen and (max-width: 992px) {
     .navContainer {
-        background-color: blue;
-    }
-    .navContainer header,
-    .navContainer nav,
-    .navContainer ul {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .navContainer header {
-        width: 98%;
-    }
-    .icons button {
-        font-size: 10px;
+        header {
+            width: 95%;
+        }
+
+        .icons button {
+            font-size: 10px;
+        }
     }
 }
 
 @media screen and (max-width: 600px) {
     .navContainer {
-        background-color: rgb(243, 43, 243);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
     }
+
+    .logoImg {
+        margin-right: auto;
+    }
+
     .navContainer header,
     .navContainer nav,
     .navContainer ul {
@@ -115,13 +190,13 @@
         align-items: center;
     }
 
-    .navContainer nav {
+    .navContainer nav.menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         width: 100%;
-    }
-
-    .navContainer header img {
-        margin-top: 5px;
-        margin-bottom: 5px;
+        transition: transform 0.3s ease;
     }
 
     .navContainer ul {
@@ -145,19 +220,13 @@
         padding: 10px;
         width: 100%;
         text-align: center;
-        /* color: white; */
         text-decoration: none;
-    }
-
-    .navContainer ul li a:hover {
-        color: rgb(129, 18, 28);
     }
 
     .social-icon {
         padding: 10px;
         margin-left: 0;
         font-size: 1.5em;
-        /* color: white; */
     }
 
     .icons {
@@ -169,11 +238,16 @@
         width: 100%;
     }
 
-    .icons button {
-        margin-bottom: 10px;
-        font-size: 20px;
-    }
-    .toggleb  {
+    .toggleb {
         margin-left: -85%;
     }
+
+    .toggleButton {
+        display: flex;
+    }
+
+    .navContainer nav.menu.hidden {
+        display: none;
+    }
 }
+

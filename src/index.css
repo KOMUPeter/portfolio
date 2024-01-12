@@ -23,13 +23,16 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 75px;
   color: white;
+  background-color: black !important;
 }
 body {
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
   font-family: 'Roboto', sans-serif;
-  color: white !important;
+  background-color: #000000; 
+  color: #ffffff;
+
 }
 p, a, li, button, ul {
   margin: 0;
