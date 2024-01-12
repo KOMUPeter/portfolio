@@ -1,16 +1,19 @@
-
 import { useState, useEffect } from "react";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInstagram, faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import {
+  faInstagram,
+  faGithub,
+  faLinkedinIn,
+} from "@fortawesome/free-brands-svg-icons";
 import styles from "../styles/HeaderNavigation.module.css";
 import logo from "../assets/img/pk.svg";
-import 'bootstrap/dist/css/bootstrap.min.css';
-
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function HeaderNavigation() {
   const [activeLink, setActiveLink] = useState("accueil");
   const [scrolled, setScrolled] = useState(false);
+  const [hiddenMenu, setHiddenMenu] = useState(true);
 
   useEffect(() => {
     const onScroll = () => {
@@ -21,26 +24,34 @@ export default function HeaderNavigation() {
       }
     };
     window.addEventListener("scroll", onScroll);
+
+    // Cleanup event listener on component unmount
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  
+  // Function to update the active link in the navigation
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
   };
-  
+
+
   return (
-    <div
-      className={`${scrolled ? styles.scrolled : ""} ${styles.navContainer}`}
-    >
+    <div className={`${scrolled ? styles.scrolled : ""} ${styles.navContainer}`}>
       <header>
         <div className={styles.toggleb}>
-        <Link to="/accueil">
-          <img src={logo} className={styles.logoImg} alt="logo" />
-        </Link>
-        <span></span>
+          {/* Link to home page */}
+          <Link to="/">
+            <img src={logo} className={styles.logoImg} alt="logo" />
+          </Link>
+          {/* Button to toggle the mobile menu */}
+          <button onClick={()=> setHiddenMenu(!hiddenMenu)} className={styles.toggleButton} aria-label="Toggle Menu">
+            <span className={styles.toggleButtonLines}></span>
+            <span className={styles.toggleButtonLines}></span>
+            <span className={styles.toggleButtonLines}></span>
+          </button>
         </div>
-        <nav>
-          <ul>
+        <nav className={`${styles.menu} ${hiddenMenu ? styles.hidden : ''} ${hiddenMenu ? '' : 'visible'}`}>          <ul>
             <li>
               <Link
                 to="/"
