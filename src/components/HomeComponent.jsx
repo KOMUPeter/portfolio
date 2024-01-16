@@ -1,17 +1,16 @@
-import styles from '../styles/HomeComponent.module.css';
+import BannerComponent from './BannerComponent.jsx';
+import ProjetsComponent from './ProjetsComponent.jsx';
+import CompetenceComponent from './CompetenceComponent.jsx';
+import ContactComponent from './Contact.jsx';
 
-export default function HomeComponent() {
-
-
-    return (
-        <div className={styles.hero}>
-            <nav>
-                <div >
-                    <a href="#">Home</a>
-                    <a href="#">Small projects</a>
-                    <a href="#">Contacts</a>
-                </div>
-            </nav>
-        </div>
-    );
+export default function HomeComponent () {
+  return (
+    <div>
+      <BannerComponent />
+      <CompetenceComponent />
+      <ProjetsComponent />
+      <ContactComponent />
+    </div>
+  );
 }
+
