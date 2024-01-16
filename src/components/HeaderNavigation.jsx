@@ -29,15 +29,15 @@ export default function HeaderNavigation() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  
   // Function to update the active link in the navigation
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
   };
 
-
   return (
-    <div className={`${scrolled ? styles.scrolled : ""} ${styles.navContainer}`}>
+    <div
+      className={`${scrolled ? styles.scrolled : ""} ${styles.navContainer}`}
+    >
       <header>
         <div className={styles.toggleb}>
           {/* Link to home page */}
@@ -45,13 +45,23 @@ export default function HeaderNavigation() {
             <img src={logo} className={styles.logoImg} alt="logo" />
           </Link>
           {/* Button to toggle the mobile menu */}
-          <button onClick={()=> setHiddenMenu(!hiddenMenu)} className={styles.toggleButton} aria-label="Toggle Menu">
+          <button
+            onClick={() => setHiddenMenu(!hiddenMenu)}
+            className={styles.toggleButton}
+            aria-label="Toggle Menu"
+          >
             <span className={styles.toggleButtonLines}></span>
             <span className={styles.toggleButtonLines}></span>
             <span className={styles.toggleButtonLines}></span>
           </button>
         </div>
-        <nav className={`${styles.menu} ${hiddenMenu ? styles.hidden : ''} ${hiddenMenu ? '' : 'visible'}`}>          <ul>
+        <nav
+          className={`${styles.menu} ${hiddenMenu ? styles.hidden : ""} ${
+            hiddenMenu ? "" : ""
+          }`}
+        >
+          {" "}
+          <ul>
             <li>
               <Link
                 to="/"
@@ -64,7 +74,7 @@ export default function HeaderNavigation() {
 
             <li>
               <Link
-                to="/competences"
+                to="/skills"
                 className={activeLink === "competences" ? styles.active : ""}
                 onClick={() => onUpdateActiveLink("competences")}
               >
