@@ -2,10 +2,10 @@ import { Container, Col, Row } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import styles from "../styles/CompetenceComponent.module.css";
-import meter1 from "../assets/img/logo.svg";
-import meter2 from "../assets/img/logo.svg";
-import meter3 from "../assets/img/logo.svg";
-import meter4 from "../assets/img/logo.svg";
+import meter1 from "../assets/img/price.png";
+import meter2 from "../assets/img/price.png";
+import meter3 from "../assets/img/price.png";
+import meter4 from "../assets/img/price.png";
 import colorSharp from "../assets/img/pk.svg";
 
 export default function CompetenceComponent() {

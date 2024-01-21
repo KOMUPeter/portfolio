@@ -80,11 +80,11 @@ export default function MyNavbar() {
               Projets
             </Nav.Link>
             <Nav.Link
-              href="#connect"
+              href="#contact"
               className={
-                activeLink === "connect" ? "active navbar-link" : "navbar-link"
+                activeLink === "contact" ? "active navbar-link" : "navbar-link"
               }
-              onClick={() => onUpdateAtiveLink("connect")}
+              onClick={() => onUpdateAtiveLink("contact")}
             >
               Contacts
             </Nav.Link>
