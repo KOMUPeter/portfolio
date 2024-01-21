@@ -1,9 +1,9 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import ProjectCard from "../components/ProjectCard.jsx";
-import projImg1 from "../assets/img/cv-image.jpg";
-import projImg2 from "../assets/img/cv-image.jpg";
-import projImg3 from "../assets/img/cv-image.jpg";
-import colorSharp2 from "../assets/img/cv-image.jpg";
+import projImg1 from "../assets/img/price.png";
+import projImg2 from "../assets/img/price.png";
+import projImg3 from "../assets/img/price.png";
+import colorSharp2 from "../assets/img/price.png";
 // import 'animate.css';
 // import TrackVisibility from 'react-on-screen';
 export default function ProjetsComponent() {
@@ -12,31 +12,37 @@ export default function ProjetsComponent() {
       title: "Business Startup",
       description: "Design & Development",
       imgUrl: projImg1,
+      url: "https://pricedealfinder.com/",
     },
     {
       title: "Business Startup",
       description: "Design & Development",
       imgUrl: projImg2,
+      url: "",
     },
     {
       title: "Business Startup",
       description: "Design & Development",
       imgUrl: projImg3,
+      url: "",
     },
     {
       title: "Business Startup",
       description: "Design & Development",
       imgUrl: projImg1,
+      url: "",
     },
     {
       title: "Business Startup",
       description: "Design & Development",
       imgUrl: projImg2,
+      url: "",
     },
     {
       title: "Business Startup",
       description: "Design & Development",
       imgUrl: projImg3,
+      url: "",
     },
   ];
 

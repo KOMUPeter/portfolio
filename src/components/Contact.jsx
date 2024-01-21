@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Container, Col, Row } from "react-bootstrap";
-import contactImage from "../assets/img/cv-image.jpg";
+import contactImage from "../assets/img/price.png";
 
 export default function ContactComponent() {
   const formInitialDetails = {
@@ -24,7 +24,7 @@ export default function ContactComponent() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending...");
-    let response = await fetch("http://localhost:5000/contact", {
+    let response = await fetch("http://localhost:5173/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
@@ -44,7 +44,7 @@ export default function ContactComponent() {
     }
   };
   return (
-    <section className="contact" id="connect">
+    <section className="contact" id="contact">
       <Container>
         <Row className="align-items-center">
           <Col size={12} md={6}>
