@@ -1,4 +1,4 @@
-# Application Portfolio de Peter
+# Application Portfolio
 
 Bienvenue sur mon portfolio ! Cette application met en lumière mon apprentissage et ma maîtrise de React.js et de Vite. J'ai entrepris ce voyage d'apprentissage autonome pour perfectionner mes compétences et explorer le monde du développement web moderne.
 
