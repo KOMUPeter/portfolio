@@ -13,7 +13,7 @@ export default function MyNavbar() {
   const [scrolled, setScrolled] = useState("false");
   useEffect(() => {
     const onScroll = () => {
-      if (window.screenY > 50) {
+      if (window.scrollY > 50) {
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -80,7 +80,7 @@ export default function MyNavbar() {
               Projets
             </Nav.Link>
             <Nav.Link
-              href="#contact"
+              href="contact"
               className={
                 activeLink === "contact" ? "active navbar-link" : "navbar-link"
               }

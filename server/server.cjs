@@ -5,18 +5,18 @@ const nodemailer = require("nodemailer");
 
 // server used to send send emails
 const app = express();
-app.use(cors());
+app.use(cors());2
 app.use(express.json());
 app.use("/", router);
 app.listen(5000, () => console.log("Server Running"));
-// console.log(process.env.EMAIL_USER);
-// console.log(process.env.EMAIL_PASS);
+console.log(process.env.EMAIL_USER);
+console.log(process.env.EMAIL_PASS);
 
 const contactEmail = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: "********@gmail.com",
-    pass: ""
+    user: "komupeter76@gmail.com",
+    pass: "lqzhdlorhrfontvb"
   },
 });
 
@@ -33,14 +33,15 @@ router.post("/contact", (req, res) => {
   const email = req.body.email;
   const message = req.body.message;
   const phone = req.body.phone;
+  const recipientEmail = req.body.recipientEmail || "default@example.com";
   const mail = {
     from: name,
-    to: "********@gmail.com",
+    to: recipientEmail,
     subject: "Contact Form Submission - Portfolio",
     html: `<p>Name: ${name}</p>
-           <p>Email: ${email}</p>
-           <p>Phone: ${phone}</p>
-           <p>Message: ${message}</p>`,
+          <p>Email: ${email}</p>
+          <p>Phone: ${phone}</p>
+          <p>Message: ${message}</p>`,
   };
   contactEmail.sendMail(mail, (error) => {
     if (error) {
