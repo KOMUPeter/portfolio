@@ -50,7 +50,7 @@ export default function BannerComponent() {
       <Container>
         <Row>
           <Col xs={12} md={6} xl={5} className="order-md-2">
-            <img src={HeaderImg} alt="HeaderImg" className="img-fluid" />
+            <img src={HeaderImg} alt="HeaderImg" className="img-fluid"/>
           </Col>
           <Col xs={12} md={6} xl={7} className="order-md-1">
             <span className={styles.tagline}>Bienvenue sur mon portfolio...</span>

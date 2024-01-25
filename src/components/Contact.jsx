@@ -24,25 +24,43 @@ export default function ContactComponent() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending...");
-    let response = await fetch("http://localhost:5173/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(formDetails),
-    });
-    setButtonText("Send");
-    let result = await response.json();
-    setFormDetails(formInitialDetails);
-    if (result.code == 200) {
-      setStatus({ succes: true, message: "Message envoyé avec succès." });
-    } else {
+  
+    try {
+      let response = await fetch("http://localhost:5173/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json;charset=utf-8",
+        },
+        body: JSON.stringify(formDetails),
+      });
+  
+      setButtonText("Send");
+  
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+  
+      let result = await response.json();
+      
+      setFormDetails(formInitialDetails);
+  
+      if (result.code === 200) {
+        setStatus({ success: true, message: "Message envoyé avec succès." });
+      } else {
+        setStatus({
+          success: false,
+          message: "Veuillez remplir les informations correctes.",
+        });
+      }
+    } catch (error) {
+      console.error('Fetch error:', error);
       setStatus({
-        succes: false,
-        message: "Veuillez remplir les informations correctes.",
+        success: false,
+        message: "Error sending message. Please try again later.",
       });
     }
   };
+  
   return (
     <section className="contact" id="contact">
       <Container>
@@ -65,7 +83,7 @@ export default function ContactComponent() {
                 <Col size={12} sm={6} className="px-1">
                   <input
                     type="text"
-                    value={formDetails.lasttName}
+                    value={formDetails.lastName}
                     placeholder="Last Name"
                     onChange={(e) => onFormUpdate("lastName", e.target.value)}
                   />
