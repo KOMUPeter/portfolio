@@ -80,7 +80,7 @@ export default function MyNavbar() {
               Projets
             </Nav.Link>
             <Nav.Link
-              href="contact"
+              href="#contact"
               className={
                 activeLink === "contact" ? "active navbar-link" : "navbar-link"
               }

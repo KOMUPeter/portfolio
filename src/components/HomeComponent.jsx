@@ -1,7 +1,7 @@
 import BannerComponent from './BannerComponent.jsx';
 import ProjetsComponent from './ProjetsComponent.jsx';
 import CompetenceComponent from './CompetenceComponent.jsx';
-import ContactComponent from './Contact.jsx';
+import Contact from './Contact.jsx';
 
 export default function HomeComponent () {
   return (
@@ -9,7 +9,7 @@ export default function HomeComponent () {
       <BannerComponent />
       <CompetenceComponent />
       <ProjetsComponent />
-      <ContactComponent />
+      <Contact />
     </div>
   );
 }

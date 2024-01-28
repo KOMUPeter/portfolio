@@ -18,7 +18,7 @@ export default function ProjetsComponent() {
       title: "Business Startup",
       description: "Design & Development",
       imgUrl: projImg2,
-      url: "",
+      url: "https://github.com/KOMUPeter",
     },
     {
       title: "Business Startup",
