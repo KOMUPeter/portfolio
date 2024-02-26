@@ -66,9 +66,15 @@ nav.navbar {
   z-index: 9999;
   transition:  0.32s ease-in-out;
 }
+.logo-with-margin {
+  margin-top: -10px;
+}
 nav.navbar.scrolled {
   padding: 0px 0;
   background-color: #121212;
+}
+.scrolled .Brand img {
+  margin-top: -50px;
 }
 nav.navbar a.navbar-brand {
     width: 9%;
@@ -105,19 +111,28 @@ span.navbar-text {
     line-height: 1;
     border: 1px solid rgba(255, 255, 255, 0.5);
 }
-.social-icon a::before {
-    content: "";
-    width: 42px;
-    height: 42px;
-    position: absolute;
-    background-color: #ffffff;
-    border-radius: 50%;
-    transform: scale(0);
+.social-icon a .svg-inline--fa {
+  color: white;
+}
+.social-icon a:hover {
+  background: linear-gradient(90.21deg, rgba(255, 255, 255, 0.5) -5.91%, rgba(135, 135, 136, 0.5) 111.58%);
+}
+.social-icon a:hover .svg-inline--fa {
+  color: black !important;
+}
+/* .social-icon a::before {
+  content: "";
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  background-color: #f7f3f3;
+  border-radius: 50%;
+  transform: scale(0);
 	transition: 0.3s ease-in-out;
 }
 .social-icon a:hover::before {
     transform: scale(1);
-}
+} */
 .social-icon a img {
 	width: 40%;
 	z-index: 1;
@@ -498,3 +513,30 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.5px;
   margin-top: 20px;
 }
+
+@media screen and (max-width: 700px) {
+  .footer .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .footer .row .col {
+    width: 100%;
+    margin-bottom: 20px; 
+  }
+
+  .footer .row .col:nth-child(1) {
+    order: 1; 
+  }
+
+  .footer .row .col:nth-child(2) {
+    order: 3; 
+  }
+
+  .footer .row .col:nth-child(3) {
+    order: 2; 
+  }
+}
+

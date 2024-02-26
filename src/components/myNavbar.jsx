@@ -9,6 +9,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 export default function MyNavbar() {
+  
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState("false");
   useEffect(() => {
@@ -45,12 +46,10 @@ export default function MyNavbar() {
     <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
       <Container>
         <Navbar.Brand href="#home" onClick={handleBrandClick}>
-          <img src={logo} alt="Logo" />
+          <img src={logo} alt="Logo" className="logo-with-margin" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <span className="navbar-toggler-icon"></span>
-        <Navbar.Toggle />
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center">
           <Nav className="me-auto">
             <Nav.Link
               href="#accueil"
@@ -101,9 +100,9 @@ export default function MyNavbar() {
                 <FontAwesomeIcon icon={faLinkedinIn} />
               </a>
             </div>
-            <button className="vvd" onClick={() => console.log("")}>
+            {/* <button className="vvd" onClick={() => console.log("")}>
               Let s Connect
-            </button>
+            </button> */}
           </span>
         </Navbar.Collapse>
       </Container>

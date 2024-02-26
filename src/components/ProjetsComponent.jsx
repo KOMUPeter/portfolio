@@ -107,8 +107,7 @@ export default function ProjetsComponent() {
       <img
         className="background-image-right"
         src={colorSharp2}
-        alt="background image"
-      ></img>
+        alt="background image"></img>
     </section>
   );
 }

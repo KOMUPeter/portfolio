@@ -1,12 +1,11 @@
 import { Route, Routes } from "react-router-dom";
-// import HeaderNavigation from './components/HeaderNavigation.jsx';
 import MyNavbar from "/src/components/myNavbar.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import HomeComponent from './components/HomeComponent.jsx';
-import Contact from "./components/Contact.jsx";
+import PageNotFound from './components/PageNotFound.jsx';
 import Footer from "./components/Footer.jsx";
 
 
@@ -20,7 +19,7 @@ export default function App() {
     <div className='container'>
       <Routes>
         <Route path='/' element={<HomeComponent/>}/>
-        <Route path='/contact' element={<Contact/>}/>
+        <Route path='*' element={<PageNotFound/>}/>
       </Routes>
     </div>
     <div>
