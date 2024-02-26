@@ -6,34 +6,45 @@ import {
     faInstagram,
     faGithub,
     faLinkedinIn,
-    } from "@fortawesome/free-brands-svg-icons";
-    
+} from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // Smooth scrolling behavior
+        });
+    };
+
     return (
-    <footer className="footer">
-        <Container>
-        <Row className="align-items-center">
-            <MailchimpForm />
-            <Col size={12} sm={6}>
-            <img src={logo} alt="Logo" />
-            </Col>
-            <Col size={12} sm={6} className="text-center text-sm-end">
-            <div className="social-icon">
-            <a href="#">
-                <FontAwesomeIcon icon={faInstagram} />
-                </a>
-                <a href="https://github.com/KOMUPeter">
-                <FontAwesomeIcon icon={faGithub} />
-                </a>
-                <a href="https://www.linkedin.com/in/peterkomudevweb">
-                <FontAwesomeIcon icon={faLinkedinIn} />
-                </a>
-            </div>
-            <p>Copyright 2024 © pk</p>
-            </Col>
-        </Row>
-        </Container>
-    </footer>
-    )
+        <footer className="footer">
+            <Container>
+                <Row className="align-items-center">
+                    <MailchimpForm />
+                    <Col m={4}>
+                        <a href="#accueil" onClick={scrollToTop}>
+                            <img src={logo} alt="Logo" />
+                        </a>
+                    </Col>
+                    <Col m={4} className="d-flex align-items-center justify-content-center">
+    <p className="text-center">Copyright 2024 © pk</p>
+</Col>
+
+                    <Col m={4} className="text-center text-sm-end">
+                        <div className="social-icon">
+                            <a href="#">
+                                <FontAwesomeIcon icon={faInstagram} />
+                            </a>
+                            <a href="https://github.com/KOMUPeter">
+                                <FontAwesomeIcon icon={faGithub} />
+                            </a>
+                            <a href="https://www.linkedin.com/in/peterkomudevweb">
+                                <FontAwesomeIcon icon={faLinkedinIn} />
+                            </a>
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+        </footer>
+    );
 }
