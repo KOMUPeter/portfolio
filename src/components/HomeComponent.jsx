@@ -1,9 +1,9 @@
-import BannerComponent from './BannerComponent.jsx';
-import ProjetsComponent from './ProjetsComponent.jsx';
-import CompetenceComponent from './CompetenceComponent.jsx';
-import Contact from './Contact.jsx';
+import BannerComponent from "./BannerComponent.jsx";
+import ProjetsComponent from "./ProjetsComponent.jsx";
+import CompetenceComponent from "./CompetenceComponent.jsx";
+import Contact from "./Contact.jsx";
 
-export default function HomeComponent () {
+export default function HomeComponent() {
   return (
     <div>
       <BannerComponent />
@@ -13,4 +13,3 @@ export default function HomeComponent () {
     </div>
   );
 }
-
