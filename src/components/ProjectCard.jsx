@@ -1,6 +1,5 @@
-
-import PropTypes from 'prop-types'; 
-import { Col } from 'react-bootstrap';
+import PropTypes from "prop-types";
+import { Col } from "react-bootstrap";
 
 // Define PropTypes for component
 ProjectCard.propTypes = {

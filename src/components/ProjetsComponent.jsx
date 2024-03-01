@@ -1,22 +1,22 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import ProjectCard from "../components/ProjectCard.jsx";
 import projImg1 from "../assets/img/price.png";
-import projImg2 from "../assets/img/price.png";
-import projImg3 from "../assets/img/price.png";
+import projImg2 from "../assets/img/github-image.png";
+import projImg3 from "../assets/img/rocks.avif";
 import colorSharp2 from "../assets/img/price.png";
 // import 'animate.css';
 // import TrackVisibility from 'react-on-screen';
 export default function ProjetsComponent() {
   const projects = [
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Projet Wordpress",
+      description: "Price deal Finder",
       imgUrl: projImg1,
       url: "https://pricedealfinder.com/",
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Mon GitHub",
+      description: "Mes projets en groupe et personnels",
       imgUrl: projImg2,
       url: "https://github.com/KOMUPeter",
     },
@@ -29,19 +29,19 @@ export default function ProjetsComponent() {
     {
       title: "Business Startup",
       description: "Design & Development",
-      imgUrl: projImg1,
+      // imgUrl: projImg4,
       url: "",
     },
     {
       title: "Business Startup",
       description: "Design & Development",
-      imgUrl: projImg2,
+      // imgUrl: projImg5,
       url: "",
     },
     {
       title: "Business Startup",
       description: "Design & Development",
-      imgUrl: projImg3,
+      // imgUrl: projImg6,
       url: "",
     },
   ];
@@ -107,7 +107,8 @@ export default function ProjetsComponent() {
       <img
         className="background-image-right"
         src={colorSharp2}
-        alt="background image"></img>
+        alt="background image"
+      ></img>
     </section>
   );
 }

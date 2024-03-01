@@ -9,7 +9,6 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 export default function MyNavbar() {
-  
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState("false");
   useEffect(() => {
@@ -49,7 +48,10 @@ export default function MyNavbar() {
           <img src={logo} alt="Logo" className="logo-with-margin" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center">
+        <Navbar.Collapse
+          id="basic-navbar-nav"
+          className="justify-content-center"
+        >
           <Nav className="me-auto">
             <Nav.Link
               href="#accueil"

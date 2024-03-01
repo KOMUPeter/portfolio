@@ -1,4 +1,3 @@
-// import styles from '../styles/HomeComponent.module.css';
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
@@ -8,9 +7,17 @@ import styles from "../styles/BannerComponent.module.css";
 export default function BannerComponent() {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const toRotate = ["Développeur Web", "React", "Symfony"];
+  const toRotate = [
+    "- PHP",
+    "- Javascript",
+    "- React",
+    "- Symfony",
+    "- Angular",
+    "- CMS",
+    "- Figma",
+  ];
   const [text, setText] = useState("");
-  const period = 2000;
+  const period = 1000;
   const [delta, setDelta] = useState(300 - Math.random() * 100);
 
   useEffect(() => {
@@ -21,7 +28,7 @@ export default function BannerComponent() {
     return () => {
       clearInterval(ticker);
     };
-  }, [text]);
+  }, [text, delta]);
 
   const tick = () => {
     let i = loopNum % toRotate.length;
@@ -41,32 +48,48 @@ export default function BannerComponent() {
     } else if (isDeleting && updatedText === "") {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
-      setDelta(500);
+      setDelta(250);
     }
   };
 
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      const yOffset = contactSection.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({ top: yOffset, behavior: 'smooth' });
+    }
+  };
+  
   return (
     <section className={styles.banner} id="accueil">
       <Container>
         <Row>
-          <Col xs={12} md={6} xl={5} className="order-md-2">
-            <img src={HeaderImg} alt="HeaderImg" className="img-fluid"/>
+          <Col
+            xs={12}
+            md={5}
+            xl={4}
+            className="order-md-2 d-flex align-items-center justify-content-center"
+          >
+            <img src={HeaderImg} alt="HeaderImg" className="img-fluid" />
           </Col>
-          <Col xs={12} md={6} xl={7} className="order-md-1">
-            <span className={styles.tagline}>Bienvenue sur mon portfolio...</span>
+          <Col xs={12} md={7} xl={8} className="order-md-1">
+            <span className={styles.tagline}>
+              Bienvenue sur mon portfolio...
+            </span>
             <h1>
-              {"Hi, I am web coded "}
+              {"Compétences "}
               <span className="wrap">{text}</span>
             </h1>
             <p>
-              Le lorem ipsum est, en imprimerie, une suite de mots sans
-              signification utilisée à titre provisoire pour calibrer une mise
-              en page, le texte définitif venant remplacer le faux-texte dès
-              qu il est prêt ou que la mise en page est achevée. Généralement,
-              on utilise un texte en faux latin, le Lorem ipsum ou Lipsum
+              Je suis un Développeur Web et Web Mobile. Je crée des sites web
+              pour des entreprises de toutes tailles, aussi bien petites que
+              grandes. De plus, je génère des QR codes pour les sites web et les
+              liens des réseaux sociaux. Pour plus d&apos;informations,
+              n&apos;hésitez pas à me contacter ici.
             </p>
-            <button onClick={() => console.log("connect")}>
-              Let s connect <ArrowRightCircle size={25} />
+
+            <button onClick={scrollToContact}>
+              Contacte-moi <ArrowRightCircle size={25} />
             </button>
           </Col>
         </Row>
