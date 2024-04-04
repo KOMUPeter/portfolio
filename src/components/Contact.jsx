@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import { Container, Row, Col } from "react-bootstrap";
-import contactImage from "../assets/img/rocks.avif";
+import contactImage from "../assets/img/contactImg.png";
 
 export default function Contact() {
   const form = useRef();
@@ -77,7 +77,7 @@ export default function Contact() {
     <section className="contact" id="contact">
       <Container>
         <Row className="align-items-center">
-          <Col size={12} md={6}>
+          <Col className="contactImage">
             <img src={contactImage} alt="Contact me" />
           </Col>
           <Col size={12} md={6}>

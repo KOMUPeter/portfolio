@@ -1,17 +1,18 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
-import HeaderImg from "../assets/img/cv-image.svg";
+import HeaderImg from "../assets/img/peterPhotoCv2.png";
 import styles from "../styles/BannerComponent.module.css";
 
 export default function BannerComponent() {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const toRotate = [
+    "- mySql",
     "- PHP",
+    "- Symfony",
     "- Javascript",
     "- React",
-    "- Symfony",
     "- Angular",
     "- CMS",
     "- Figma",
@@ -53,13 +54,14 @@ export default function BannerComponent() {
   };
 
   const scrollToContact = () => {
-    const contactSection = document.getElementById('contact');
+    const contactSection = document.getElementById("contact");
     if (contactSection) {
-      const yOffset = contactSection.getBoundingClientRect().top + window.scrollY;
-      window.scrollTo({ top: yOffset, behavior: 'smooth' });
+      const yOffset =
+        contactSection.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({ top: yOffset, behavior: "smooth" });
     }
   };
-  
+
   return (
     <section className={styles.banner} id="accueil">
       <Container>
@@ -81,11 +83,9 @@ export default function BannerComponent() {
               <span className="wrap">{text}</span>
             </h1>
             <p>
-              Je suis un Développeur Web et Web Mobile. Je crée des sites web
-              pour des entreprises de toutes tailles, aussi bien petites que
-              grandes. De plus, je génère des QR codes pour les sites web et les
-              liens des réseaux sociaux. Pour plus d&apos;informations,
-              n&apos;hésitez pas à me contacter ici.
+              Je suis un développeur web et mobile, spécialisé dans la création des applications pour les entreprises
+              de toutes tailles. Je génère également des QR codes pour les sites
+              et les réseaux sociaux. Pour en savoir plus, contactez-moi ici.
             </p>
 
             <button onClick={scrollToContact}>
