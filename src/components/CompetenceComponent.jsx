@@ -2,11 +2,11 @@ import { Container, Col, Row } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import styles from "../styles/CompetenceComponent.module.css";
-import meter1 from "../assets/img/price.png";
-import meter2 from "../assets/img/price.png";
-import meter3 from "../assets/img/price.png";
-import meter4 from "../assets/img/price.png";
-import colorSharp from "../assets/img/pk.svg";
+import meter1 from "../assets/img/react.png";
+import meter2 from "../assets/img/symfony.png";
+import meter3 from "../assets/img/figma.png";
+import meter4 from "../assets/img/wordpress.png";
+import meter5 from "../assets/img/mysql.png";
 
 export default function CompetenceComponent() {
   const responsive = {
@@ -37,10 +37,11 @@ export default function CompetenceComponent() {
             <div className={styles.skillbx}>
               <h2>Compétences</h2>
               <p>
-                e lorem ipsum est, en imprimerie, une suite de mots sans
-                signification utilisée à titre provisoire pour calibrer une mise
-                en page, le texte définitif venant remplacer le faux-texte dès
-                qu il est prêt ou que la mise en page est achevée. Généra
+                Explorez mes compétences à travers ce carrousel, mettant en
+                avant les compétences essentielles pour la création de solutions
+                digitales. De la conception Front-end  au
+                développement back-end, je propose une gamme complète
+                d&apos;expertise en développement web.
               </p>
               <Carousel
                 responsive={responsive}
@@ -48,31 +49,30 @@ export default function CompetenceComponent() {
                 className={styles.skillSlider}
               >
                 <div className="item">
-                  <img src={meter1} alt="image" />
-                  <h5>Web Development</h5>
+                  <div className={styles.itemPercent}><img src={meter1} alt="image" /></div>
+                  <h5>Front-end</h5>
                 </div>
                 <div className="item">
-                  <img src={meter2} alt="image" />
-                  <h5>site Vitrine</h5>
-                </div>
-                <div className="item">
-                  <img src={meter3} alt="image" />
-                  <h5>Ui designe</h5>
-                </div>
-                <div className="item">
-                  <img src={meter4} alt="image" />
+                <div className={styles.itemPercent}><img src={meter2} alt="image" /></div>
                   <h5>Back-end</h5>
+                </div>
+                <div className="item">
+                <div className={styles.itemPercent}><img src={meter3} alt="image" /></div>
+                  <h5>Design UI</h5>
+                </div>
+                <div className="item">
+                <div className={styles.itemPercent}><img src={meter4} alt="image" /></div>
+                  <h5>Site Vitrine</h5>
+                </div>
+                <div className="item">
+                <div className={styles.itemPercent}><img src={meter5} alt="image" /></div>
+                  <h5>Base de données</h5>
                 </div>
               </Carousel>
             </div>
           </Col>
         </Row>
       </Container>
-      <img
-        className={styles.backgroundLeft}
-        src={colorSharp}
-        alt="colorSharp"
-      />
     </section>
   );
 }

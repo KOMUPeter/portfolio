@@ -6,10 +6,10 @@ import Contact from "./Contact.jsx";
 export default function HomeComponent() {
   return (
     <div>
-      <BannerComponent />
-      <CompetenceComponent />
-      <ProjetsComponent />
-      <Contact />
+      <BannerComponent/>
+      <CompetenceComponent/>
+      <ProjetsComponent/>
+      <Contact/>
     </div>
   );
 }

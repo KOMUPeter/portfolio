@@ -24,11 +24,21 @@
     line-height: 1.5em;
     margin: 14px 0 75px 0;
 }
+.itemPercent img {
+    height: 150px;
+    width: 150px;
+    background-size: cover;
+    border-radius: 50px;
+    border: 2px solid white;
+}
 
 .skillSlider {
     width: 80%;
     margin: 0 auto;
     position: relative;
+}
+.skillSlider h5 {
+    margin: 30px;
 }
 
 .skillSlider .item img {
@@ -36,10 +46,14 @@
     margin: 0 auto 15px auto;
 }
 
-.backgroundLeft {
-    top: 28%;
-    position: absolute;
-    bottom: 0;
-    width: 40%;
-    z-index: 4;
+/* responsive */
+@media screen and (max-width: 770px) {
+    .skill h2 {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .skill h2 {
+        font-size: 30px;
+    }
 }
