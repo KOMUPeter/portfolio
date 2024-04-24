@@ -26,13 +26,15 @@ export default function Contact() {
 
     try {
       const templateParams = {
+        to_name: "Peter KOMU",
         user_name: formDetails.user_name,
-        user_email: formDetails.user_email,
+        to_email: formDetails.user_email,
+        from_email: formDetails.user_name,
         message: formDetails.message,
       };
 
       await emailjs.send(
-        "service_0v5tzcc",
+        "service_h8d0e6k",
         "template_n66g885",
         templateParams,
         "BtHV__CXnQZAhsgfA"

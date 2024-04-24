@@ -10,7 +10,7 @@ import {
 
 export default function MyNavbar() {
   const [activeLink, setActiveLink] = useState("home");
-  const [scrolled, setScrolled] = useState("false");
+  const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     const onScroll = () => {
       if (window.scrollY > 50) {

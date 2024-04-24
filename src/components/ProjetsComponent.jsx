@@ -2,7 +2,7 @@ import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import ProjectCard from "../components/ProjectCard.jsx";
 import projImg1 from "../assets/img/price.png";
 import projImg2 from "../assets/img/github-image.png";
-import projImg3 from "../assets/img/contactImg.png";
+import projImg3 from "../assets/img/logo-removebg-preview.png";
 import colorSharp2 from "../assets/img/price.png";
 // import 'animate.css';
 // import TrackVisibility from 'react-on-screen';
@@ -21,10 +21,10 @@ export default function ProjetsComponent() {
       url: "https://github.com/KOMUPeter",
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Lezzet Grill Restaurant",
+      description: "Présentation Menu de restauration rapide",
       imgUrl: projImg3,
-      url: "",
+      url: "https://lezzetgrill74.com/",
     },
     // {
     //   title: "Business Startup",
