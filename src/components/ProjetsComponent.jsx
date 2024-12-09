@@ -21,8 +21,8 @@ export default function ProjetsComponent() {
       url: "https://github.com/KOMUPeter",
     },
     {
-      title: "Lezzet Grill",
-      description: "Menu Restauration",
+      title: "Lezzet Grill Restaurant",
+      description: "Présentation Menu de restauration rapide",
       imgUrl: projImg3,
       url: "https://lezzetgrill74.com/",
     },
