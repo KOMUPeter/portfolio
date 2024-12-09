@@ -1,7 +1,7 @@
 /************ Banner Css ************/
 .banner {
     padding: 150px 0 230px 0;
-    background-image: url('../assets/img/background4.jpg');
+    background-image: url('../assets/img/background2.jpg');
     background-position: center;
     background-size: cover;
     /* background: linear-gradient(181deg, rgb(2, 0, 97) 15%, rgb(97, 149, 219) 158.5%); */
@@ -10,7 +10,7 @@
     font-weight: 700;
     letter-spacing: 0.8px;
     padding: 8px 10px;
-    background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+    background: linear-gradient(90.21deg, rgba(36, 39, 80, 0.5) -5.91%, rgba(24, 15, 65, 0.5) 111.58%);
     border: 1px solid rgba(255, 255, 255, 0.5);
     font-size: 20px;
     margin-bottom: 16px;
@@ -38,7 +38,7 @@
 .banner button {
     color: #fff;
     margin: 0 0 -120px 0;
-    background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+    background: linear-gradient(90.21deg, rgba(5, 25, 141, 0.5) -5.91%, rgba(5, 5, 7, 0.5) 111.58%);
     font-weight: 700;
     font-size: 20px;
     margin-top: 60px;
