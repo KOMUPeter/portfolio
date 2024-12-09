@@ -1,9 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import MyNavbar from "/src/components/myNavbar.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
-
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import HomeComponent from './components/HomeComponent.jsx';
 import PageNotFound from './components/PageNotFound.jsx';
 import Footer from "./components/Footer.jsx";
