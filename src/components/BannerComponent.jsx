@@ -83,9 +83,7 @@ export default function BannerComponent() {
               <span className="wrap">{text}</span>
             </h1>
             <p>
-              Je suis un développeur web et mobile, spécialisé dans la création des applications pour les entreprises
-              de toutes tailles. Je génère également des QR codes pour les sites
-              et les réseaux sociaux. Pour en savoir plus, contactez-moi ici.
+            Je suis développeur web et mobile, spécialisé dans la création d&apos;applications adaptées aux besoins des entreprises, en utilisant React et Symfony.
             </p>
 
             <button onClick={scrollToContact}>
